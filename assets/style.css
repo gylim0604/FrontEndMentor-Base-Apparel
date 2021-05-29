@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+*, *::after, *::before {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ce9797;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  margin: 0;
+  background: url("/images/bg-pattern-desktop.svg");
+  min-height: 100vh;
+}
+
+article {
+  max-width: 375px;
+}
+
+.logo {
+  margin: 2rem;
+  display: block;
+  background: url("/images/logo.svg") no-repeat;
+  height: 1.5rem;
+  background-size: contain;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-img {
+  background: url("/images/hero-mobile.jpg") no-repeat;
+  background-size: cover;
+  height: 30vh;
+  width: 100%;
+}
+
+.hero-header {
+  text-transform: uppercase;
+}
+
+.hero-header h2 {
+  text-align: center;
+  letter-spacing: .75rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.hero-header h2 span {
+  font-weight: 600;
+  font-size: inherit;
+  color: #413a3a;
+}
+
+.hero-text {
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-text p {
+  line-height: 1.5rem;
+  margin: 0;
+}
+
+.hero-action {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-action input {
+  padding: .5rem 1rem;
+  border: 1px #ce9797 solid;
+  border-radius: 50px;
+}
+
+.hero-action button {
+  color: white;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  border: none;
+  padding: 0 1.5rem;
+  margin-left: -2rem;
+  border-radius: 50px;
+}
+/*# sourceMappingURL=style.css.map */
