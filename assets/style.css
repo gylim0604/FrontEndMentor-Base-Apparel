@@ -13,23 +13,36 @@ body {
   display: grid;
   place-content: center;
   margin: 0;
-  background: url("/images/bg-pattern-desktop.svg");
+  background: url("/images/bg-pattern-desktop.svg") no-repeat;
+  background-size: 3000%;
   min-height: 100vh;
 }
 
 article {
   max-width: 375px;
+  padding: 3rem 0;
 }
 
 .logo {
-  margin: 2rem;
   display: block;
-  background: url("/images/logo.svg") no-repeat;
   height: 1.5rem;
   background-size: contain;
+  padding: 2rem;
 }
 
-.hero {
+.logo img {
+  height: 1.5rem;
+}
+
+.hero-img {
+  background: url("/images/hero-mobile.jpg") no-repeat;
+  background-size: cover;
+  height: 30vh;
+  width: 100%;
+}
+
+.hero-content {
+  padding: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,13 +53,7 @@ article {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.hero-img {
-  background: url("/images/hero-mobile.jpg") no-repeat;
-  background-size: cover;
-  height: 30vh;
-  width: 100%;
+  text-align: center;
 }
 
 .hero-header {
@@ -54,7 +61,6 @@ article {
 }
 
 .hero-header h2 {
-  text-align: center;
   letter-spacing: .75rem;
   font-size: 2.5rem;
   font-weight: 300;
@@ -67,7 +73,6 @@ article {
 }
 
 .hero-text {
-  text-align: center;
   padding: 0 2rem;
 }
 
@@ -77,15 +82,17 @@ article {
 }
 
 .hero-action {
-  padding: 1rem 0;
+  padding: 2rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .hero-action input {
-  padding: .5rem 1rem;
-  border: 1px #ce9797 solid;
+  font-weight: 300;
+  background: transparent;
+  padding: .75rem 2rem;
+  border: 0.5px #ce9797 solid;
   border-radius: 50px;
 }
 
@@ -93,8 +100,80 @@ article {
   color: white;
   background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   border: none;
-  padding: 0 1.5rem;
-  margin-left: -2rem;
+  padding: 0 1.25rem;
+  margin-left: -3rem;
   border-radius: 50px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  -webkit-box-shadow: 0.2rem 0.5rem 0.75rem rgba(206, 151, 151, 0.35);
+          box-shadow: 0.2rem 0.5rem 0.75rem rgba(206, 151, 151, 0.35);
+}
+
+.hero-action button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 720px) {
+  body {
+    background-size: 60%;
+  }
+  article {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 15% auto 40%;
+        grid-template-columns: 15% auto 40%;
+    -ms-grid-rows: 10% auto;
+        grid-template-rows: 10% auto;
+    max-width: unset;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+  }
+  .hero-img {
+    background: url("/images/hero-desktop.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3/4;
+  }
+  .logo {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    padding-left: 0;
+  }
+  .logo img {
+    height: 2rem;
+  }
+  .hero-content {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    text-align: left;
+    padding-right: 10rem;
+  }
+  .hero-header h2 {
+    font-size: 4rem;
+    line-height: 3.75rem;
+    margin: 5rem 0 3rem;
+  }
+  .hero-text {
+    padding: 0;
+  }
+  .hero-action {
+    width: 100%;
+  }
+  .hero-action input {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
+  .hero-action button {
+    -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
